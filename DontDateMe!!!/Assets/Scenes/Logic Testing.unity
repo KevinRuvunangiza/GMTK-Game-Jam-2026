@@ -201,7 +201,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 47591068}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 297566459}
+        m_TargetAssemblyTypeName: MatchManager, Assembly-CSharp
+        m_MethodName: SelectOption
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &47591068
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -470,6 +482,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MatchManager
   allArchetypes:
   - {fileID: 11400000, guid: d2577d73dd43c40a794a60eedb3528cf, type: 2}
+  npcTextDisplay: {fileID: 637128729}
+  optionTextDisplays:
+  - {fileID: 1437034420}
+  - {fileID: 461461299}
+  - {fileID: 621484088}
+  - {fileID: 1010642438}
   globalTimer: 60
 --- !u!1 &461461297
 GameObject:
@@ -483,7 +501,7 @@ GameObject:
   - component: {fileID: 461461300}
   - component: {fileID: 461461299}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: OptionButton_1_Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -503,10 +521,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 680529983}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 234, y: 88}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &461461299
 MonoBehaviour:
@@ -622,7 +640,7 @@ GameObject:
   - component: {fileID: 621484089}
   - component: {fileID: 621484088}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: OptionButton_2_Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -870,7 +888,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: -232.96667, y: -65.07975, z: -233.90999, w: -49.04562}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1045,7 +1063,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 680529985}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 297566459}
+        m_TargetAssemblyTypeName: MatchManager, Assembly-CSharp
+        m_MethodName: SelectOption
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &680529985
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1509,7 +1539,7 @@ GameObject:
   - component: {fileID: 1010642439}
   - component: {fileID: 1010642438}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: OptionButton_3_Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1716,7 +1746,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1318657515}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 297566459}
+        m_TargetAssemblyTypeName: MatchManager, Assembly-CSharp
+        m_MethodName: SelectOption
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1318657515
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1837,7 +1879,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1398228662}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 297566459}
+        m_TargetAssemblyTypeName: MatchManager, Assembly-CSharp
+        m_MethodName: SelectOption
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1398228662
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1888,7 +1942,7 @@ GameObject:
   - component: {fileID: 1437034421}
   - component: {fileID: 1437034420}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: OptionButton_0_Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
