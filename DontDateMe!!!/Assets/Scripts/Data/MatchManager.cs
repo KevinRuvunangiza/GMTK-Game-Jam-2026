@@ -1,23 +1,30 @@
 using UnityEngine;
 using System.Collections.Generic;
-using TMPro; // Required for the UI text
-using UnityEngine.InputSystem; // Required for the New Input System fix
+using TMPro;
+using UnityEngine.InputSystem;
 
 public class MatchManager : MonoBehaviour
 {
     [Header("Game Data")]
-    [Tooltip("Drag your Archetype ScriptableObjects here!")]
+    [Tooltip("Drop your populated Archetype SO files here")]
     public List<ProgressionArchetypeSO> allArchetypes;
     private ProgressionArchetypeSO currentArchetype;
 
-    [Header("UI Elements")]
-    public TextMeshProUGUI npcTextDisplay;
-    public TextMeshProUGUI[] optionTextDisplays; // Make sure this array has exactly 4 elements in the Inspector
+    [Header("Chat Bubble UI")]
+    public Transform chatContainer; // The empty object with the Vertical Layout Group
+    public GameObject npcBubblePrefab; // The pink/left bubble prefab
+    public GameObject playerBubblePrefab; // The blue/right bubble prefab
+    public TextMeshProUGUI[] optionTextDisplays; // The text inside your 4 UI buttons
+    public TextMeshProUGUI timerTextDisplay; // The visual clock
+
+    [Header("Game Over UI")]
+    public GameObject gameOverCanvas; // The "You've Been Blocked!" screen
 
     [Header("Match State")]
     public float globalTimer = 60f;
     private int currentAnger = 0;
     private int currentStepIndex = 0;
+    private bool isMatchActive = true;
 
     void Start()
     {
@@ -26,16 +33,24 @@ public class MatchManager : MonoBehaviour
 
     void Update()
     {
-        // 1. The WarioWare Countdown
+        // Pause timer and block inputs when the Game Over screen is active
+        if (!isMatchActive) return;
+
         globalTimer -= Time.deltaTime;
+
+        if (timerTextDisplay != null)
+        {
+            timerTextDisplay.text = globalTimer.ToString("F1");
+        }
+
         if (globalTimer <= 0)
         {
             Debug.Log("GAME OVER! TIME RAN OUT!");
-            this.enabled = false; // Stops the loop
+            this.enabled = false;
             return;
         }
 
-        // 2. Temporary Keyboard Controls (Using the New Input System)
+        // Temporary Keyboard Controls using the New Input System
         if (Keyboard.current != null)
         {
             if (Keyboard.current.digit1Key.wasPressedThisFrame) SelectOption(0);
@@ -47,45 +62,40 @@ public class MatchManager : MonoBehaviour
 
     public void LoadNextMatch()
     {
-        if (allArchetypes == null || allArchetypes.Count == 0)
+        if (allArchetypes == null || allArchetypes.Count == 0) return;
+
+        // Clean up the UI: Destroy all previous chat bubbles
+        foreach (Transform child in chatContainer)
         {
-            Debug.LogError("You need to add Archetypes to the list in the GameManager!");
-            return;
+            Destroy(child.gameObject);
         }
 
-        // Pick a random girl from your list
+        // Load the new target
         currentArchetype = allArchetypes[Random.Range(0, allArchetypes.Count)];
-
-        // Reset the state for the new match
         currentAnger = 0;
         currentStepIndex = 0;
 
-        Debug.Log($"--- SWIPE! New Match: {currentArchetype.archetypeName} ---");
         DisplayCurrentStep();
     }
 
     public void DisplayCurrentStep()
     {
-        // Check if we ran out of dialogue before she got angry enough
+        // Trap them on the final step if they haven't reached the anger threshold
         if (currentStepIndex >= currentArchetype.conversationSequence.Count)
         {
-            Debug.Log("She got bored and ghosted you! Penalty!");
-            globalTimer -= 5f; // Lose 5 seconds
-            LoadNextMatch(); // Swipe away
-            return;
+            currentStepIndex = currentArchetype.conversationSequence.Count - 1;
         }
 
-        // Grab the current step of the conversation
         DialogueStep currentStep = currentArchetype.conversationSequence[currentStepIndex];
 
-        // Pick a random variation of what the NPC says and push it to the UI
+        // Pick a random variation of the NPC's current complaint
         string npcLine = currentStep.npcLineVariations[Random.Range(0, currentStep.npcLineVariations.Length)];
-        if (npcTextDisplay != null)
-        {
-            npcTextDisplay.text = npcLine;
-        }
 
-        // Loop through your 4 buttons and update their text on the UI
+        // Spawn the NPC Bubble on the left side of the chat
+        GameObject newBubble = Instantiate(npcBubblePrefab, chatContainer);
+        newBubble.GetComponentInChildren<TextMeshProUGUI>().text = npcLine;
+
+        // Push the 4 static douchebag options to the UI buttons
         for (int i = 0; i < currentStep.options.Length; i++)
         {
             if (i < optionTextDisplays.Length && optionTextDisplays[i] != null)
@@ -95,33 +105,48 @@ public class MatchManager : MonoBehaviour
         }
     }
 
-    // Brian's UI buttons (and your keyboard shortcuts) call this function
     public void SelectOption(int index)
     {
         DialogueStep currentStep = currentArchetype.conversationSequence[currentStepIndex];
-
-        // Safety check to prevent errors if you press a button that doesn't have an option
         if (index >= currentStep.options.Length) return;
 
-        // Get the response you clicked and add its anger value
         PlayerResponse selectedResponse = currentStep.options[index];
+
+        // Spawn the Player Bubble on the right side of the chat
+        GameObject playerBubble = Instantiate(playerBubblePrefab, chatContainer);
+        playerBubble.GetComponentInChildren<TextMeshProUGUI>().text = selectedResponse.answerText;
+
+        // Apply the anger value
         currentAnger += selectedResponse.angerValue;
 
-        Debug.Log($"You chose option [{index}]. Anger is now {currentAnger}/{currentArchetype.angerThresholdToBlock}");
-
-        // Evaluate the Win/Loss State
+        // Check if the threshold is met
         if (currentAnger >= currentArchetype.angerThresholdToBlock)
         {
-            Debug.Log("BAM! SHE BLOCKED YOU! +3 Seconds!");
-            globalTimer += 3f; // Reward time
-            LoadNextMatch(); // Instantly swipe to the next girl
+            isMatchActive = false; // Freeze the game loop
+
+            if (gameOverCanvas != null)
+            {
+                gameOverCanvas.SetActive(true); // Pop up the Blocked screen
+            }
         }
         else
-        
         {
-            // Not angry enough yet. Move to the next dialogue step!
             currentStepIndex++;
             DisplayCurrentStep();
         }
+    }
+
+    // Brian hooks the "NEXT" button on the Game Over canvas directly to this function
+    public void NextMatchAfterBlock()
+    {
+        globalTimer += 3f; // Reward time
+
+        if (gameOverCanvas != null)
+        {
+            gameOverCanvas.SetActive(false); // Hide the blocked screen
+        }
+
+        isMatchActive = true; // Unpause the timer
+        LoadNextMatch(); // Instantly swipe to the next chat
     }
 }

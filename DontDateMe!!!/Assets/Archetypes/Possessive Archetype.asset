@@ -1,0 +1,132 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e813a894a35754d77b6414fccd3fdd7c, type: 3}
+  m_Name: Possessive Archetype
+  m_EditorClassIdentifier: Assembly-CSharp::ProgressionArchetypeSO
+  archetypeName: Doris
+  angerThresholdToBlock: 8
+  dialogueSpreadsheet: {fileID: 4900000, guid: c2dadadf1e8c0ef488837012685d5d8c, type: 3}
+  conversationSequence:
+  - npcLineVariations:
+    - We just matched, which means you're my boyfriend now. Delete the app immediately.
+    - I saw you look at my profile. We're dating now. Don't even think about talking
+      to anyone else.
+    - Finally, you matched back. I've already planned our first three anniversaries.
+    options:
+    - answerText: chill out
+      angerValue: 1
+    - answerText: We literally just matched 10 seconds ago.
+      angerValue: 2
+    - answerText: I'm already cheating on you with three other matches.
+      angerValue: 3
+    - answerText: I only swiped right so I could show my group chat your massive
+        forehead.
+      angerValue: 4
+  - npcLineVariations:
+    - Why did it take you 45 seconds to reply? Who is she?!
+    - You're typing too slow. Are you texting another girl right now?!
+    - I can see you're online. If you don't reply instantly, I'm going to scream.
+    options:
+    - answerText: im tired
+      angerValue: 1
+    - answerText: You're acting insane, I was just typing.
+      angerValue: 2
+    - answerText: I was busy actively ignoring you.
+      angerValue: 3
+    - answerText: I was texting your mom. She replies way faster.
+      angerValue: 4
+  - npcLineVariations:
+    - I checked your Instagram. Who is @sarah_smith99 and why did you like her pic
+      in 2018?
+    - Give me your phone password right now so I can check your Snapchat best friends
+      list.
+    - I know you have a finsta. Give me the login or we are over before we even start.
+    options:
+    - answerText: no
+      angerValue: 1
+    - answerText: I'm not giving you my passwords, weirdo.
+      angerValue: 2
+    - answerText: Sarah is hotter than you and doesn't smell like desperation.
+      angerValue: 3
+    - answerText: My password is "I_Hate_You_123", go ahead and log in.
+      angerValue: 4
+  - npcLineVariations:
+    - I tracked your IP address from this chat. Why are you at a Starbucks? Are you
+      on a date?!
+    - I have your location on Snap Map. Who are you with right now? Tell me the truth!
+    - My friend drove past your house and said your car isn't there. WHERE ARE YOU?
+    options:
+    - answerText: getting coffee
+      angerValue: 1
+    - answerText: Stop stalking me, it's incredibly creepy.
+      angerValue: 2
+    - answerText: I'm at the courthouse getting a restraining order against you.
+      angerValue: 3
+    - answerText: I'm actually inside your walls watching you type this.
+      angerValue: 4
+  - npcLineVariations:
+    - Whatever. Just promise me we're naming our first daughter Khaleesi.
+    - I already booked our wedding venue for next October. You need to pay the deposit
+      today.
+    - My mom wants to meet you tonight. Wear a suit. If you don't show up, I'll ruin
+      you.
+    options:
+    - answerText: too fast
+      angerValue: 1
+    - answerText: We are literally never getting married.
+      angerValue: 2
+    - answerText: I'd rather drink battery acid than meet your mother.
+      angerValue: 3
+    - answerText: I'm selling your engagement ring to buy V-Bucks.
+      angerValue: 4
+  - npcLineVariations:
+    - IF YOU EVER LOOK AT ANOTHER WOMAN I WILL BURN YOUR HOUSE DOWN!
+    - I WILL DESTROY EVERYTHING YOU LOVE IF YOU LEAVE ME! YOU ARE MINE!
+    - I'M GOING TO MESSAGE EVERY GIRL IN YOUR FOLLOWERS LIST AND TELL THEM YOU HAVE
+      A DISEASE!
+    options:
+    - answerText: ok crazy
+      angerValue: 1
+    - answerText: You need serious psychiatric help.
+      angerValue: 2
+    - answerText: Good luck, I live in a dumpster and nobody loves me anyway.
+      angerValue: 3
+    - answerText: Joke's on you, I already told them I have a disease to sound edgy.
+      angerValue: 4
+  - npcLineVariations:
+    - WHY ARE YOU DOING THIS TO US?! WE WERE SUPPOSED TO BE SOULMATES!
+    - I AM CRYING AND THROWING UP! YOU RUINED MY ENTIRE LIFE!
+    - ANSWER MY FACETIME RIGHT NOW OR I'M DRIVING MY CAR INTO A DENNY'S!
+    options:
+    - answerText: relax
+      angerValue: 1
+    - answerText: Stop being so dramatic about everything.
+      angerValue: 2
+    - answerText: Send me a video of you throwing up or it didn't happen.
+      angerValue: 3
+    - answerText: Do it, but aim for the kitchen so I can get some free pancakes.
+      angerValue: 4
+  - npcLineVariations:
+    - THAT'S IT! I'M BLOCKING YOU! BUT I'LL STILL BE WATCHING YOU FROM MY FAKE ACCOUNTS!
+    - YOU'RE DEAD TO ME! ENJOY BEING ALONE FOREVER! (I'M STILL GOING TO TEXT YOUR
+      MOM THOUGH)
+    - I HATE YOU! BLOCKED! I'M GOING TO DATE YOUR BEST FRIEND INSTEAD!
+    options:
+    - answerText: bye
+      angerValue: 1
+    - answerText: Finally, some peace and quiet.
+      angerValue: 2
+    - answerText: My best friend has zero standards, you guys are absolutely perfect
+        for each other.
+      angerValue: 3
+    - answerText: I ALREADY BLOCKED YOU IN REAL LIFE\! *CASTS INVISIBILITY SPELL*
+      angerValue: 4
