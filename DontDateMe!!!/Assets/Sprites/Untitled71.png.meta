@@ -1,10 +1,22 @@
 fileFormatVersion: 2
-guid: a39ca766223ba5f4fbfa86d94df8eafe
+guid: 2dbdda3db5f1460418f4c96ead2f9377
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7459125539662204365
-    second: Hairs_0
+      213: 2251269243474606967
+    second: Untitled71_0
+  - first:
+      213: 2222108639897100389
+    second: Untitled71_1
+  - first:
+      213: -1496296837160186246
+    second: Untitled71_2
+  - first:
+      213: 1567241681724368252
+    second: Untitled71_3
+  - first:
+      213: -5552086711767379970
+    second: Untitled71_4
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +49,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -51,7 +63,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 16
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -113,13 +125,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Hairs_0
+      name: Untitled71_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 1280
-        height: 1280
+        x: 282
+        y: 1168
+        width: 648
+        height: 776
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +140,96 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 332f36187dcdb7890800000000000000
-      internalID: -7459125539662204365
+      spriteID: 77bf01ff27d1e3f10800000000000000
+      internalID: 2251269243474606967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Untitled71_1
+      rect:
+        serializedVersion: 2
+        x: 929
+        y: 1685
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 560a465e80486de10800000000000000
+      internalID: 2222108639897100389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Untitled71_2
+      rect:
+        serializedVersion: 2
+        x: 1310
+        y: 1164
+        width: 648
+        height: 778
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7ec68e44f51c3be0800000000000000
+      internalID: -1496296837160186246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Untitled71_3
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 0
+        width: 644
+        height: 762
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c75ed548106ffb510800000000000000
+      internalID: 1567241681724368252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Untitled71_4
+      rect:
+        serializedVersion: 2
+        x: 1254
+        y: 0
+        width: 642
+        height: 764
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eff40f64d8603f2b0800000000000000
+      internalID: -5552086711767379970
       vertices: []
       indices: 
       edges: []
@@ -148,7 +248,11 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Hairs_0: -7459125539662204365
+      Untitled71_0: 2251269243474606967
+      Untitled71_1: 2222108639897100389
+      Untitled71_2: -1496296837160186246
+      Untitled71_3: 1567241681724368252
+      Untitled71_4: -5552086711767379970
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
