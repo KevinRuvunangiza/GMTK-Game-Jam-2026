@@ -1,0 +1,137 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e813a894a35754d77b6414fccd3fdd7c, type: 3}
+  m_Name: Witch Archetype
+  m_EditorClassIdentifier: Assembly-CSharp::ProgressionArchetypeSO
+  archetypeName: Tamarah
+  angerThresholdToBlock: 8
+  dialogueSpreadsheet: {fileID: 4900000, guid: d6d3a09582f4cee409b49c37b36d9a49, type: 3}
+  conversationSequence:
+  - npcLineVariations:
+    - I just pulled the Tower card while looking at your profile. Are you harboring
+      dark entities?
+    - My tarot deck literally jumped out of my hands when I matched with you. What
+      kind of toxic energy are you hiding?
+    - I was doing a reading and pulled the Death card for us. Explain your negative
+      attachments right now.
+    options:
+    - answerText: I don't know what that means.
+      angerValue: 1
+    - answerText: It's literally just a piece of cardboard.
+      angerValue: 2
+    - answerText: I am the dark entity.
+      angerValue: 3
+    - answerText: Pull another one, best two out of three.
+      angerValue: 4
+  - npcLineVariations:
+    - I'm lighting sage right now. Go burn some palo santo, your texts are lowering
+      my frequency.
+    - You are ruining my aura through the phone. I need you to physically cleanse
+      your screen with moon water.
+    - My vibrational frequency is dropping just talking to you. Light an incense
+      immediately.
+    options:
+    - answerText: I don't have any of that stuff.
+      angerValue: 1
+    - answerText: Sage smells like burnt weed.
+      angerValue: 2
+    - answerText: Your aura was weak to begin with.
+      angerValue: 3
+    - answerText: I just sprayed some Axe body spray, does that count?
+      angerValue: 4
+  - npcLineVariations:
+    - What time were you born? I need to run your chart to see why your energy is
+      so jagged.
+    - Tell me your exact birth minute. I need to know your rising sign to understand
+      this chaotic behavior.
+    - I literally cannot speak to you until I have your birth certificate. Call your
+      mom right now.
+    options:
+    - answerText: Like, morning I think?
+      angerValue: 1
+    - answerText: Astrology is just space racism.
+      angerValue: 2
+    - answerText: I'm a toxic trait rising.
+      angerValue: 3
+    - answerText: I lied about my age on here anyway.
+      angerValue: 4
+  - npcLineVariations:
+    - My amethyst crystal literally just cracked in half. You are emitting toxic
+      masculine frequencies.
+    - My rose quartz turned black the second you texted back. Your heart chakra is
+      completely dead.
+    - My pendulum is spinning violently. The spirits are screaming at me to run from
+      you.
+    options:
+    - answerText: Sorry about your rock.
+      angerValue: 1
+    - answerText: You probably bought a fake one on Temu.
+      angerValue: 2
+    - answerText: That's exactly the frequency I was aiming for.
+      angerValue: 3
+    - answerText: Superglue it, I don't care.
+      angerValue: 4
+  - npcLineVariations:
+    - My black cat is hissing at my phone screen. Animals can sense evil.
+    - My familiar just scratched me when I opened your message. You are cursed.
+    - My cat literally threw up on my altar because of your vibes. Explain yourself.
+    options:
+    - answerText: Your cat is just weird.
+      angerValue: 1
+    - answerText: Take it to the vet instead of texting me.
+      angerValue: 2
+    - answerText: I'm more of a dog guy anyway.
+      angerValue: 3
+    - answerText: Tell the cat I said pspsps.
+      angerValue: 4
+  - npcLineVariations:
+    - I am writing your name on a bay leaf right now. You are going to burn.
+    - I'm getting a jar and some rusty nails. You have no idea what you just started.
+    - I am literally collecting graveyard dirt for a hex jar with your name on it.
+    options:
+    - answerText: Please don't do that.
+      angerValue: 1
+    - answerText: Magic isn't real, grow up.
+      angerValue: 2
+    - answerText: Make sure you spell my name right.
+      angerValue: 3
+    - answerText: Jokes on you, my ex already hexed me.
+      angerValue: 4
+  - npcLineVariations:
+    - I just sent screenshots to my coven. We are doing a group banishing ritual
+      tonight.
+    - My sisters are coming over. We are casting a circle specifically to ruin your
+      life.
+    - The entire coven agrees you are a psychic vampire. The ritual starts at midnight.
+    options:
+    - answerText: That seems like an overreaction.
+      angerValue: 1
+    - answerText: You and your friends have too much free time.
+      angerValue: 2
+    - answerText: Do I get to watch the ritual or what?
+      angerValue: 3
+    - answerText: Ask the coven if any of them are single.
+      angerValue: 4
+  - npcLineVariations:
+    - YOU ARE BLOCKED. ENJOY YOUR KARMIC DEBT. I AM MANIFESTING YOUR DOWNFALL.
+    - HAVE FUN WITH YOUR TERRIBLE KARMA. THE PLANETS ARE ALIGNING TO DESTROY YOU.
+      ENJOY YOUR SATURN RETURN, IT IS GOING TO RUIN YOU.
+    - I BIND YOU FROM DOING HARM. BLOCKED.
+    options:
+    - answerText: Cool, bye.
+      angerValue: 1
+    - answerText: Take your rocks with you.
+      angerValue: 2
+    - answerText: My downfall still pays more than your tarot readings.
+      angerValue: 3
+    - answerText: Manifest me a sandwich while you're at it.
+      angerValue: 4

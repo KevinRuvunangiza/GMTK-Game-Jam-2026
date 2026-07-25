@@ -1,0 +1,109 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e813a894a35754d77b6414fccd3fdd7c, type: 3}
+  m_Name: Cannibal Archetype
+  m_EditorClassIdentifier: Assembly-CSharp::ProgressionArchetypeSO
+  archetypeName: Goop
+  angerThresholdToBlock: 8
+  dialogueSpreadsheet: {fileID: 4900000, guid: 46ea23e1d7e83dd4eb7f45371a375e93, type: 3}
+  conversationSequence:
+  - npcLineVariations:
+    - You look absolutely delicious in your profile picture.
+    - Wow, you look so incredibly tasty. I just want to take a bite out of you.
+    - My mouth is literally watering looking at you. You look like a whole meal.
+    options:
+    - answerText: Thanks I guess.
+      angerValue: 1
+    - answerText: You're coming on way too strong, relax.
+      angerValue: 2
+    - answerText: I get that a lot from girls who can't afford me.
+      angerValue: 3
+    - answerText: I taste even better than I look, grab a bib.
+      angerValue: 4
+  - npcLineVariations:
+    - What's your blood type? And do you eat a lot of red meat?
+    - Are you O-negative by any chance? I need to know your exact diet.
+    - I only match with grass-fed guys. What's your blood type?
+    options:
+    - answerText: I don't know my blood type.
+      angerValue: 1
+    - answerText: Why are you asking weird medical questions? Are you a nurse?
+      angerValue: 2
+    - answerText: I only eat protein powder and the tears of my exes.
+      angerValue: 3
+    - answerText: O-positive, but I can bleed out for you if you ask nicely.
+      angerValue: 4
+  - npcLineVariations:
+    - How much do you weigh? I'm looking for someone with good marbling.
+    - What's your body fat percentage? I like my men a little tender.
+    - Do you work out a lot? I hate tough, stringy muscle meat.
+    options:
+    - answerText: I go to the gym sometimes.
+      angerValue: 1
+    - answerText: Stop trying to fat-shame me, it's pathetic.
+      angerValue: 2
+    - answerText: I'm 3% body fat, pure alpha muscle. You couldn't handle it.
+      angerValue: 3
+    - answerText: Marbling? Bro, I'm A5 Wagyu, you can't afford this cut.
+      angerValue: 4
+  - npcLineVariations:
+    - If you were a piece of meat, what kind of marinade would you soak in?
+    - Do you prefer dry rubs or wet marinades? Just asking for a recipe.
+    - How do you feel about garlic and rosemary? I think you'd pair well with them.
+    options:
+    - answerText: I like BBQ sauce.
+      angerValue: 1
+    - answerText: This roleplay is getting really cringe now.
+      angerValue: 2
+    - answerText: I don't need seasoning, I'm naturally perfect.
+      angerValue: 3
+    - answerText: Bathe me in hot sauce and call me a chicken wing.
+      angerValue: 4
+  - npcLineVariations:
+    - Do you think you'd fit in a standard chest freezer?
+    - How do you feel about slow roasting over an open fire?
+    - I'm just measuring my oven to see if a grown man can fit inside.
+    options:
+    - answerText: That's a weird question.
+      angerValue: 1
+    - answerText: You're trying way too hard to be edgy.
+      angerValue: 2
+    - answerText: I'm way too tall for your cheap apartment oven.
+      angerValue: 3
+    - answerText: I'll bring the apple for my mouth, you bring the fire.
+      angerValue: 4
+  - npcLineVariations:
+    - I am literally going to chop you up and eat you for dinner.
+    - I'm not flirting! I am a cannibal and you are my next meal!
+    - Stop acting cool! I am going to harvest your organs and consume your flesh!
+    options:
+    - answerText: Sure you are.
+      angerValue: 1
+    - answerText: You need to be locked in a psych ward immediately.
+      angerValue: 2
+    - answerText: Good luck, I'd give you terrible food poisoning.
+      angerValue: 3
+    - answerText: Jokes on you, being eaten alive is my main kink.
+      angerValue: 4
+  - npcLineVariations:
+    - I AM SHARPENING MY MEAT CLEAVER RIGHT NOW! YOU ARE DEAD MEAT!
+    - MY OVEN IS PREHEATED TO 400 DEGREES! I'M COMING FOR YOUR LEGS!
+    - I'M GETTING THE HACKSAW! YOU'RE GOING TO BE LEFTOVERS FOR A WEEK!
+    options:
+    - answerText: Calm down.
+      angerValue: 1
+    - answerText: Have fun screaming into the void, weirdo.
+      angerValue: 2
+    - answerText: You probably don't even know how to cook, let alone butcher a man.
+      angerValue: 3
+    - answerText: Make sure you save my biceps for meal prep Sunday!
+      angerValue: 4

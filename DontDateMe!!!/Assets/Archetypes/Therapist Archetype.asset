@@ -1,0 +1,131 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e813a894a35754d77b6414fccd3fdd7c, type: 3}
+  m_Name: Therapist Archetype
+  m_EditorClassIdentifier: Assembly-CSharp::ProgressionArchetypeSO
+  archetypeName: Leslie
+  angerThresholdToBlock: 8
+  dialogueSpreadsheet: {fileID: 4900000, guid: 4bebc036ee653e24b9207ed4edec3f4b, type: 3}
+  conversationSequence:
+  - npcLineVariations:
+    - Your profile picture gives off major avoidant attachment style energy. I need
+      someone who can hold space for me.
+    - I'm sensing a deeply disorganized attachment from your bio. Are you currently
+      doing the work to heal your inner child?
+    - Just based on how you text, I can tell you have an insecure-avoidant attachment.
+      I only date securely attached men.
+    options:
+    - answerText: I don't know what that means.
+      angerValue: 1
+    - answerText: You're projecting your own insecurities onto a stranger.
+      angerValue: 2
+    - answerText: My attachment style is 'out of your league'.
+      angerValue: 3
+    - answerText: My inner child thinks your inner child is a loser.
+      angerValue: 4
+  - npcLineVariations:
+    - I need to set a boundary right now. You aren't matching my emotional labor
+      and it's highly triggering.
+    - I'm establishing a firm boundary. I will not carry the mental load for this
+      conversation while you give nothing.
+    - Your lack of communication is crossing a boundary. I require active emotional
+      labor from my partners.
+    options:
+    - answerText: Sounds like a lot of work.
+      angerValue: 1
+    - answerText: You're being overly sensitive about a dating app chat.
+      angerValue: 2
+    - answerText: I'm not reading all that, congratulations or sorry that happened.
+      angerValue: 3
+    - answerText: I'm billing you $200 an hour for reading these messages.
+      angerValue: 4
+  - npcLineVariations:
+    - Stop trying to gaslight me! You are completely invalidating my lived experience
+      right now.
+    - The way you're speaking to me is textbook gaslighting. My lived experience
+      is valid, regardless of your opinion.
+    - Are you gaslighting me right now? Because it feels like you're actively dismissing
+      my emotional reality.
+    options:
+    - answerText: I literally didn't say anything.
+      angerValue: 1
+    - answerText: Gaslighting isn't real, you made that up because you're crazy.
+      angerValue: 2
+    - answerText: Your lived experience sounds incredibly boring.
+      angerValue: 3
+    - answerText: I'm not gaslighting you, I'm gatekeeping and girlbossing you.
+      angerValue: 4
+  - npcLineVariations:
+    - Your toxic behavior is activating my trauma response. I am actively being triggered
+      by your words.
+    - You are triggering a severe trauma response in my body. I need you to take
+      accountability for your impact.
+    - My fight-or-flight is activated. Your aggressive communication style is a massive
+      trigger for my past trauma.
+    options:
+    - answerText: Just take a deep breath.
+      angerValue: 1
+    - answerText: You're responsible for your own triggers, don't blame me.
+      angerValue: 2
+    - answerText: Good, I hope it ruins your whole week.
+      angerValue: 3
+    - answerText: 'Trigger warning: I''m about to call you ugly.'
+      angerValue: 4
+  - npcLineVariations:
+    - You are displaying severe narcissistic tendencies. You literally lack the capacity
+      for cognitive empathy.
+    - It's giving covert narcissist. You center yourself in every interaction and
+      have zero emotional intelligence.
+    - I am dealing with a textbook malignant narcissist. You are completely devoid
+      of basic human empathy.
+    options:
+    - answerText: Okay, whatever you say.
+      angerValue: 1
+    - answerText: You just call everyone you don't like a narcissist.
+      angerValue: 2
+    - answerText: I'm a narcissist because I'm actually better than you.
+      angerValue: 3
+    - answerText: I have plenty of empathy, I just don't want to waste it on a mid-tier
+        match.
+      angerValue: 4
+  - npcLineVariations:
+    - My nervous system is completely dysregulated right now because of your toxic
+      energy.
+    - You have pushed me out of my window of tolerance. My nervous system is in a
+      state of absolute dysregulation.
+    - I am physically shaking. Your refusal to do the work has completely dysregulated
+      my somatic baseline.
+    options:
+    - answerText: Maybe drink some water.
+      angerValue: 1
+    - answerText: You're acting hysterical over absolutely nothing.
+      angerValue: 2
+    - answerText: Go take a Xanax and leave me alone.
+      angerValue: 3
+    - answerText: Have you tried turning your nervous system off and on again?
+      angerValue: 4
+  - npcLineVariations:
+    - Don't you dare use toxic positivity on me! You are deflecting from doing the
+      shadow work!
+    - This is classic deflection. You refuse to integrate your shadow self and resort
+      to toxic positivity instead.
+    - Stop avoiding the root wound! Your toxic positivity is just a defense mechanism
+      to avoid real vulnerability!
+    options:
+    - answerText: I'm just chilling.
+      angerValue: 1
+    - answerText: You're the one deflecting from the fact that you're unhinged.
+      angerValue: 2
+    - answerText: My shadow self thinks you're an insufferable loser too.
+      angerValue: 3
+    - answerText: "Good vibes only! \u2728 Live Laugh Love! \u2728"
+      angerValue: 4
